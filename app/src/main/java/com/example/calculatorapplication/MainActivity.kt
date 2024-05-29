@@ -28,17 +28,18 @@ class MainActivity : ComponentActivity() {
         var number = edt1.text.toString()
 
         when (view.id) {
-            R.id.btnOne -> number += "1"
-            R.id.btnTwo -> number += "2"
-            R.id.btnThree -> number += "3"
-            R.id.btnFour -> number += "4"
-            R.id.btnFive -> number += "5"
-            R.id.btnSix -> number += "6"
-            R.id.btnSeven -> number += "7"
-            R.id.btnEight -> number += "8"
-            R.id.btnNine -> number += "9"
-            R.id.btnZero -> number += "0"
-            R.id.btnDot -> number += "."
+            R.id.b1 -> number += "1"
+            R.id.b2 -> number += "2"
+            R.id.b3 -> number += "3"
+            R.id.b4 -> number += "4"
+            R.id.b5 -> number += "5"
+            R.id.b6 -> number += "6"
+            R.id.b7 -> number += "7"
+            R.id.b8 -> number += "8"
+            R.id.b9 -> number += "9"
+            R.id.b0 -> number += "0"
+            R.id.b00 -> number += "00"
+            R.id.bpoint -> number += "."
         }
         edt1.setText(number)
     }
@@ -48,10 +49,10 @@ class MainActivity : ComponentActivity() {
         initialNumber = edt1.text.toString()
 
         when (view.id) {
-            R.id.btnMultiply -> operator = "*"
-            R.id.btnMinus -> operator = "-"
-            R.id.btnDivide -> operator = "/"
-            R.id.btnPlus -> operator = "+"
+            R.id.multiply -> operator = "*"
+            R.id.subtract -> operator = "-"
+            R.id.divide -> operator = "/"
+            R.id.add -> operator = "+"
         }
         edt1.setText(operator)
     }
@@ -66,7 +67,6 @@ class MainActivity : ComponentActivity() {
             "*" -> output = initialNumber.toDouble() * newNumber.toDouble()
             "-" -> output = initialNumber.toDouble() - newNumber.toDouble()
         }
-
         edt1.setText(output.toString())
     }
 
