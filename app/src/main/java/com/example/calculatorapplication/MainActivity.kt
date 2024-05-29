@@ -67,7 +67,13 @@ class MainActivity : ComponentActivity() {
             "*" -> output = initialNumber.toDouble() * newNumber.toDouble()
             "-" -> output = initialNumber.toDouble() - newNumber.toDouble()
         }
-        edt1.setText(output.toString())
+
+        // Check if output is an integer
+        if (output % 1 == 0.0) {
+            edt1.setText(output.toInt().toString())
+        } else {
+            edt1.setText(output.toString())
+        }
     }
 
     fun clearEvent(view: View) {
